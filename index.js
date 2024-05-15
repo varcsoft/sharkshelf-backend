@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.options('*', cors());
+app.get('/', async (req, res) => res.send('Hello! Welcome To SHARKSHELF'));
 initprisma();
 initRoutes(app);
 initServer(app);
