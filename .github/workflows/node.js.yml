@@ -31,3 +31,4 @@ jobs:
         touch .env
         echo ${{ secrets.PROD_SHARKSHELF }}
         echo ${{ secrets.PROD_SHARKSHELF }} > .env
+    - run: pm2 restart sharkshelf-backend
